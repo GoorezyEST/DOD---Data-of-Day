@@ -224,10 +224,11 @@ main {
   }
 
   @media screen and (max-width: 450px) {
-    padding: 0;
+    padding: 0.8rem 0 0.8rem 0;
     margin: 0;
     box-shadow: none;
     height: 100vh;
+    display: block;
   }
 
   &__header {
@@ -446,6 +447,11 @@ main {
     align-items: center;
     flex-direction: column;
     font-family: "Source Sans Pro";
+    padding: 1rem 0 0 0;
+
+    @media screen and (max-width: 300px) {
+      padding: 0.2rem 0 0 0;
+    }
 
     &__temp {
       display: flex;
@@ -543,11 +549,42 @@ main {
 
       @media screen and (max-width: 200px) {
         font-size: 0.5rem;
-        padding: 1rem 0 0 0;
+        padding: 0.2rem 0 0 0;
       }
 
       @media screen and (max-width: 150px) {
         font-size: 0.4rem;
+      }
+    }
+
+    &_s {
+      font-weight: 600;
+      color: $black-temp;
+      font-size: 1.4rem;
+      padding: 0.3rem;
+
+      &::selection {
+        background-color: $select;
+      }
+
+      &::-moz-selection {
+        background-color: $select;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 0.8rem;
+      }
+
+      @media screen and (max-width: 300px) {
+        font-size: 0.6rem;
+      }
+
+      @media screen and (max-width: 200px) {
+        font-size: 0.45rem;
+      }
+
+      @media screen and (max-width: 150px) {
+        font-size: 0.3rem;
       }
     }
 
@@ -675,6 +712,47 @@ main {
       }
     }
 
+    &--btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+      width: 25%;
+      border: 2.2px solid $black;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      @media screen and (max-width: 400px) {
+        width: 20%;
+        border: 1.8px solid $black;
+        padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+      }
+
+      @media screen and (max-width: 300px) {
+        width: 16%;
+        border: 1.6px solid $black;
+        padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      &__icon {
+        width: 50%;
+
+        @media screen and (max-width: 300px) {
+          width: 75%;
+        }
+      }
+    }
+
     &__footer {
       display: flex;
       justify-content: center;
@@ -730,4 +808,13 @@ hr {
   background-color: #2e2e2e52;
   border: none;
   margin: 1.8rem 0 1.8rem 0;
+
+  @media screen and (max-width: 450px) {
+    background-color: transparent;
+    margin: 0.8rem 0 0.8rem 0;
+  }
+
+  @media screen and (max-width: 200px) {
+    margin: 0.4rem 0 0.4rem 0;
+  }
 }
