@@ -199,6 +199,52 @@ function success(pos) {
               state.innerHTML = `Mist`;
             }
 
+            themeBtn.addEventListener("click", function () {
+              if (themeBtn.classList.contains("light")) {
+                themeBtn.classList.remove("light");
+                themeBtn.classList.add("dark");
+
+                btnIcon.src = "img/theme_icon-dark.png";
+                logo.src = "/img/DoD-Logo-Main-dark.svg";
+
+                document.documentElement.style.setProperty("--text", "#e0e0e0");
+                document.documentElement.style.setProperty(
+                  "--text-sec",
+                  "#eeeeeebe"
+                );
+                document.documentElement.style.setProperty(
+                  "--line",
+                  "#e9e9e952"
+                );
+                document.documentElement.style.setProperty("--main", "#3a3a3a");
+                document.documentElement.style.setProperty(
+                  "--background",
+                  "#292929"
+                );
+              } else if (themeBtn.classList.contains("dark")) {
+                themeBtn.classList.remove("dark");
+                themeBtn.classList.add("light");
+
+                btnIcon.src = "img/theme_icon-light.png";
+                logo.src = "/img/DoD-Logo-Main-light.svg";
+
+                document.documentElement.style.setProperty("--text", "#2e2e2e");
+                document.documentElement.style.setProperty(
+                  "--text-sec",
+                  "#2e2e2ebe"
+                );
+                document.documentElement.style.setProperty(
+                  "--line",
+                  "#2e2e2e52"
+                );
+                document.documentElement.style.setProperty("--main", "#f3f3f3");
+                document.documentElement.style.setProperty(
+                  "--background",
+                  "#e0e0e0"
+                );
+              }
+            });
+
             slogan.innerHTML = `All you have to know about today`;
             welc.innerHTML = `¡Welcome to DOD!`;
             its.innerHTML = `It's currently &darr;`;
