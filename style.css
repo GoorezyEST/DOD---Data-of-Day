@@ -42,9 +42,9 @@ body {
 .language {
   position: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 130%;
   width: 100%;
   z-index: 1000;
@@ -55,6 +55,31 @@ body {
     height: 100vh;
   }
 }
+
+.language__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.language__btns_es {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.language__btns_en {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
 .language--title {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
@@ -107,7 +132,6 @@ body {
   padding: 0.2rem 1rem 0.2rem 1rem;
   border-radius: 0.4rem;
   border: none;
-  margin-right: 4rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -130,19 +154,16 @@ body {
 @media screen and (max-width: 300px) {
   .language__btns--es {
     font-size: 1rem;
-    margin-right: 1.5rem;
   }
 }
 @media screen and (max-width: 200px) {
   .language__btns--es {
     font-size: 0.4rem;
-    margin-right: 0.8rem;
   }
 }
 @media screen and (max-width: 150px) {
   .language__btns--es {
     font-size: 0.3rem;
-    margin-right: 0.4rem;
   }
 }
 .language__btns--es:hover {
@@ -160,7 +181,6 @@ body {
   padding: 0.2rem 1rem 0.2rem 1rem;
   border-radius: 0.4rem;
   border: none;
-  margin-left: 4rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -183,19 +203,16 @@ body {
 @media screen and (max-width: 300px) {
   .language__btns--en {
     font-size: 1rem;
-    margin-left: 1.5rem;
   }
 }
 @media screen and (max-width: 200px) {
   .language__btns--en {
     font-size: 0.4rem;
-    margin-left: 0.8rem;
   }
 }
 @media screen and (max-width: 150px) {
   .language__btns--en {
     font-size: 0.3rem;
-    margin-left: 0.4rem;
   }
 }
 .language__btns--en:hover {

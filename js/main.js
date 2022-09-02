@@ -154,8 +154,10 @@ function success(pos) {
           btnEn.addEventListener("click", function () {
             lang.classList.add("hide");
             name.innerHTML = `¿How's the weather at ${data.name}?`;
-            temp.innerHTML = `${data.main.temp}°C`;
-            feel.innerHTML = `Feels like <span class="main__weather_f--feels">${data.main.feels_like}°C</span>`;
+            temp.innerHTML = `${data.main.temp + 32}°F`;
+            feel.innerHTML = `Feels like <span class="main__weather_f--feels">${
+              data.main.feels_like + 32
+            }°F</span>`;
             hum.innerHTML = `Humidity of <span class="main__weather_h--hum">${data.main.humidity}%</span>`;
             foot.innerHTML = `Developed by <span class="main__weather__footer--dev">Goorezy</span>`;
 
