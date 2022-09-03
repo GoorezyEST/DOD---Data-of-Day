@@ -45,12 +45,16 @@ function success(pos) {
           const themeBtn = document.querySelector(".main__weather--btn");
           const btnIcon = document.querySelector(".main__weather--btn__icon");
 
+          const humIcon = document.querySelector(".hum-icon");
+          const windIcon = document.querySelector(".wind-icon");
+
           const name = document.querySelector(".main__weather--main");
           const temp = document.querySelector(".main__weather__temp--temp");
           const icon = document.querySelector(".main__weather__temp--icon");
           const state = document.querySelector(".main__weather_s");
           const feel = document.querySelector(".main__weather_f");
-          const hum = document.querySelector(".main__weather_h");
+          const hum = document.querySelector(".main__weather_h-text");
+          const wind = document.querySelector(".main__weather-w-text");
 
           btnEs.addEventListener("click", function () {
             lang.classList.add("hide");
@@ -58,6 +62,9 @@ function success(pos) {
             temp.innerHTML = `${data.main.temp}°C`;
             feel.innerHTML = `Sensación térmica <span class="main__weather_f--feels">${data.main.feels_like}°C</span>`;
             hum.innerHTML = `Humedad <span class="main__weather_h--hum">${data.main.humidity}%</span>`;
+            wind.innerHTML = `Viento a <span class="main__weather_w--wind">${Math.trunc(
+              data.wind.speed * 3.6
+            )} km/h</span>`;
             foot.innerHTML = `Desarrollado por <span class="main__weather__footer--dev">Goorezy</span>`;
 
             if (data.weather[0].description === "clear sky") {
@@ -107,6 +114,8 @@ function success(pos) {
 
                 btnIcon.src = "img/theme_icon-dark.png";
                 logo.src = "/img/DoD-Logo-Main-dark.svg";
+                humIcon.src = "img/icon-hum-light.png";
+                windIcon.src = "img/icon-wind-light.png";
 
                 document.documentElement.style.setProperty("--text", "#e0e0e0");
                 document.documentElement.style.setProperty(
@@ -128,6 +137,8 @@ function success(pos) {
 
                 btnIcon.src = "img/theme_icon-light.png";
                 logo.src = "/img/DoD-Logo-Main-light.svg";
+                humIcon.src = "img/icon-hum-dark.png";
+                windIcon.src = "img/icon-wind-dark.png";
 
                 document.documentElement.style.setProperty("--text", "#2e2e2e");
                 document.documentElement.style.setProperty(
@@ -159,6 +170,10 @@ function success(pos) {
               data.main.feels_like + 32
             }°F</span>`;
             hum.innerHTML = `Humidity of <span class="main__weather_h--hum">${data.main.humidity}%</span>`;
+            wind.innerHTML = `Wind at <span class="main__weather_w--wind">${Math.trunc(
+              data.wind.speed * 2,
+              237
+            )} mph</span>`;
             foot.innerHTML = `Developed by <span class="main__weather__footer--dev">Goorezy</span>`;
 
             if (data.weather[0].description === "clear sky") {
@@ -208,6 +223,8 @@ function success(pos) {
 
                 btnIcon.src = "img/theme_icon-dark.png";
                 logo.src = "/img/DoD-Logo-Main-dark.svg";
+                humIcon.src = "img/icon-hum-light.png";
+                windIcon.src = "img/icon-wind-light.png";
 
                 document.documentElement.style.setProperty("--text", "#e0e0e0");
                 document.documentElement.style.setProperty(
@@ -229,6 +246,8 @@ function success(pos) {
 
                 btnIcon.src = "img/theme_icon-light.png";
                 logo.src = "/img/DoD-Logo-Main-light.svg";
+                humIcon.src = "img/icon-hum-dark.png";
+                windIcon.src = "img/icon-wind-dark.png";
 
                 document.documentElement.style.setProperty("--text", "#2e2e2e");
                 document.documentElement.style.setProperty(

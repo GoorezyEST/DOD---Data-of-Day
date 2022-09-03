@@ -609,7 +609,59 @@ main {
     font-size: 0.3rem;
   }
 }
+
+.hum-icon {
+  width: 30px;
+  margin-right: 4px;
+}
+@media screen and (max-width: 600px) {
+  .hum-icon {
+    width: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hum-icon {
+    width: 16px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .hum-icon {
+    width: 12px;
+  }
+}
+@media screen and (max-width: 200px) {
+  .hum-icon {
+    width: 9px;
+  }
+}
+.wind-icon {
+  width: 30px;
+  margin-right: 8px;
+}
+@media screen and (max-width: 600px) {
+  .wind-icon {
+    width: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .wind-icon {
+    width: 16px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .wind-icon {
+    width: 12px;
+  }
+}
+@media screen and (max-width: 200px) {
+  .wind-icon {
+    width: 9px;
+  }
+}
 .main__weather_f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   color: var(--text-sec);
   font-size: 1.6rem;
@@ -674,6 +726,9 @@ main {
   }
 }
 .main__weather_h {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   color: var(--text-sec);
   font-size: 1.4rem;
@@ -734,6 +789,73 @@ main {
 }
 @media screen and (max-width: 150px) {
   .main__weather_h--hum {
+    font-size: 0.3rem;
+  }
+}
+.main__weather_w {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--text-sec);
+  font-size: 1.4rem;
+  padding: 0.3rem;
+}
+.main__weather_w::selection {
+  background-color: rgba(255, 138, 92, 0.733);
+}
+.main__weather_w::-moz-selection {
+  background-color: rgba(255, 138, 92, 0.733);
+}
+@media screen and (max-width: 400px) {
+  .main__weather_w {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main__weather_w {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 200px) {
+  .main__weather_w {
+    font-size: 0.45rem;
+  }
+}
+@media screen and (max-width: 150px) {
+  .main__weather_w {
+    font-size: 0.3rem;
+  }
+}
+.main__weather_w--wind {
+  font-weight: 600;
+  color: rgb(235, 115, 67);
+  font-size: 1.4rem;
+  padding: 0.3rem;
+}
+.main__weather_w--wind::selection {
+  background-color: rgba(255, 138, 92, 0.733);
+}
+.main__weather_w--wind::-moz-selection {
+  background-color: rgba(255, 138, 92, 0.733);
+}
+@media screen and (max-width: 400px) {
+  .main__weather_w--wind {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main__weather_w--wind {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 200px) {
+  .main__weather_w--wind {
+    font-size: 0.45rem;
+  }
+}
+@media screen and (max-width: 150px) {
+  .main__weather_w--wind {
     font-size: 0.3rem;
   }
 }
