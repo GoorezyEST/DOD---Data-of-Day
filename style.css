@@ -58,10 +58,15 @@ body {
 
 .language__btns {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 15rem;
+}
+@media screen and (max-width: 400px) {
+  .language__btns {
+    margin-top: 8rem;
+  }
 }
 
 .language__btns_es {
@@ -70,57 +75,34 @@ body {
   justify-content: center;
   align-items: center;
   width: max-content;
+  margin-right: 3rem;
 }
-
+@media screen and (max-width: 400px) {
+  .language__btns_es {
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (max-width: 200px) {
+  .language__btns_es {
+    margin-right: 0.8rem;
+  }
+}
 .language__btns_en {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: max-content;
-}
-
-.language--title {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  color: #f3f3f3;
-  text-transform: uppercase;
-  font-size: 3rem;
-}
-.language--title::selection {
-  background-color: rgba(255, 138, 92, 0.733);
-}
-.language--title::-moz-selection {
-  background-color: rgba(255, 138, 92, 0.733);
-}
-@media screen and (max-width: 800px) {
-  .language--title {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .language--title {
-    font-size: 1.4rem;
-  }
+  margin-left: 3rem;
 }
 @media screen and (max-width: 400px) {
-  .language--title {
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 300px) {
-  .language--title {
-    font-size: 0.8rem;
+  .language__btns_en {
+    margin-left: 1.5rem;
   }
 }
 @media screen and (max-width: 200px) {
-  .language--title {
-    font-size: 0.4rem;
-  }
-}
-@media screen and (max-width: 150px) {
-  .language--title {
-    font-size: 0.3rem;
+  .language__btns_en {
+    margin-left: 0.8rem;
   }
 }
 .language__btns--es {
