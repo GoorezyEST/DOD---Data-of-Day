@@ -59,8 +59,10 @@ function success(pos) {
           btnEs.addEventListener("click", function () {
             lang.classList.add("hide");
             name.innerHTML = `¿Cómo esta el clima en ${data.name}?`;
-            temp.innerHTML = `${data.main.temp}°C`;
-            feel.innerHTML = `Sensación térmica <span class="main__weather_f--feels">${data.main.feels_like}°C</span>`;
+            temp.innerHTML = `${Math.trunc(data.main.temp)}°C`;
+            feel.innerHTML = `Sensación térmica <span class="main__weather_f--feels">${Math.trunc(
+              data.main.feels_like
+            )}°C</span>`;
             hum.innerHTML = `Humedad <span class="main__weather_h--hum">${data.main.humidity}%</span>`;
             wind.innerHTML = `Viento a <span class="main__weather_w--wind">${Math.trunc(
               data.wind.speed * 3.6
@@ -165,10 +167,10 @@ function success(pos) {
           btnEn.addEventListener("click", function () {
             lang.classList.add("hide");
             name.innerHTML = `¿How's the weather at ${data.name}?`;
-            temp.innerHTML = `${data.main.temp + 32}°F`;
-            feel.innerHTML = `Feels like <span class="main__weather_f--feels">${
+            temp.innerHTML = `${Math.trunc(data.main.temp + 32)}°F`;
+            feel.innerHTML = `Feels like <span class="main__weather_f--feels">${Math.trunc(
               data.main.feels_like + 32
-            }°F</span>`;
+            )}°F</span>`;
             hum.innerHTML = `Humidity of <span class="main__weather_h--hum">${data.main.humidity}%</span>`;
             wind.innerHTML = `Wind at <span class="main__weather_w--wind">${Math.trunc(
               data.wind.speed * 2,
