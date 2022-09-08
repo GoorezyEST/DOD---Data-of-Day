@@ -75,29 +75,26 @@ function success(pos) {
               icon.innerHTML = `<img src="img/few_clouds.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
             } else if (data.weather[0].description === "scattered clouds") {
               icon.innerHTML = `<img src="img/scattered_clouds.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
-            } else if (
-              data.weather[0].description === "broken clouds" ||
-              "overcast clouds"
-            ) {
+            } else if (data.weather[0].description === "broken clouds") {
               icon.innerHTML = `<img src="img/broken_clouds.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
-            } else if (data.weather[0].main === "Rain" || "Drizzle") {
-              icon.innerHTML = `<img src="img/shower_rain.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
+            } else if (data.weather[0].main === "Rain") {
+              console.log(data.weather[0].main);
+              icon.innerHTML = `<img src="img/rain.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
             } else if (data.weather[0].main === "Thunderstorm") {
               icon.innerHTML = `<img src="img/thunderstorm.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
             } else if (data.weather[0].main === "Snow") {
               icon.innerHTML = `<img src="img/snow.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
-            } else if (
-              data.weather[0].main === "Mist" ||
-              "Smoke" ||
-              "Haze" ||
-              "Dust" ||
-              "Fog" ||
-              "Sand" ||
-              "Dust" ||
-              "Ash" ||
-              "Squall" ||
-              "Tornado"
-            ) {
+            } else if (data.weather[0].main === "Mist") {
+              icon.innerHTML = `<img src="img/mist.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
+            } else if (data.weather[0].main === "Smoke") {
+              icon.innerHTML = `<img src="img/mist.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
+            } else if (data.weather[0].main === "Haze") {
+              icon.innerHTML = `<img src="img/mist.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
+            } else if (data.weather[0].main === "Dust") {
+              icon.innerHTML = `<img src="img/mist.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
+            } else if (data.weather[0].main === "Ash") {
+              icon.innerHTML = `<img src="img/mist.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
+            } else if (data.weather[0].main === "Squall") {
               icon.innerHTML = `<img src="img/mist.png" alt="Weather icon" class="main__weather__temp--icon__pic">`;
             }
 
@@ -107,10 +104,7 @@ function success(pos) {
               state.innerHTML = `Pocas nubes`;
             } else if (data.weather[0].description === "scattered clouds") {
               state.innerHTML = `Nubes dispersas`;
-            } else if (
-              data.weather[0].description === "broken clouds" ||
-              "overcast clouds"
-            ) {
+            } else if (data.weather[0].description === "broken clouds") {
               state.innerHTML = `Muchas nubes`;
             } else if (data.weather[0].main === "Rain") {
               state.innerHTML = `Lluvia`;
@@ -118,19 +112,18 @@ function success(pos) {
               state.innerHTML = `Tormeta`;
             } else if (data.weather[0].main === "Snow") {
               state.innerHTML = `Nieve`;
-            } else if (
-              data.weather[0].main === "Mist" ||
-              "Smoke" ||
-              "Haze" ||
-              "Dust" ||
-              "Fog" ||
-              "Sand" ||
-              "Dust" ||
-              "Ash" ||
-              "Squall" ||
-              "Tornado"
-            ) {
-              state.innerHTML = `Poca visibilidad`;
+            } else if (data.weather[0].main === "Mist") {
+              state.innerHTML = "Poca visibilidad";
+            } else if (data.weather[0].main === "Smoke") {
+              state.innerHTML = "Poca visibilidad";
+            } else if (data.weather[0].main === "Haze") {
+              state.innerHTML = "Poca visibilidad";
+            } else if (data.weather[0].main === "Dust") {
+              state.innerHTML = "Poca visibilidad";
+            } else if (data.weather[0].main === "Ash") {
+              state.innerHTML = "Poca visibilidad";
+            } else if (data.weather[0].main === "Squall") {
+              state.innerHTML = "Poca visibilidad";
             }
 
             themeBtn.addEventListener("click", function () {
